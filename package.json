@@ -1,0 +1,16 @@
+{
+  "name": "react-shop-fullstack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^6.2.0"
+  },
+  "scripts": {
+    "server": "npm start --prefix server",
+    "admin": "npm start --prefix admin",
+    "client": "npm start --prefix client",
+    "start:admin": "concurrently \"npm run server\" \"npm run admin\"",
+    "start:client": "concurrently \"npm run server\" \"npm run client\""
+  }
+}
